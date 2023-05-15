@@ -19,7 +19,7 @@ jobs:
           cache: "pip"
       - name: Add system dependencies
         run: |
-          sudo apt install clingo libclingo-dev gcc python3-build
+          sudo apt install python3-build
       - name: Add Python dependencies
         run: |
           python -m pip install --upgrade pip setuptools build
