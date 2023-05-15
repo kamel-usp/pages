@@ -23,12 +23,15 @@ jobs:
       - name: Add Python dependencies
         run: |
           python -m pip install --upgrade pip setuptools build
+      - name: Install pymdpages
+        run: |
+          cd pymdpages && pip -m build && pip install --force-reinstall dist/pymdpages-*.whl && cd -
       - name: Add pygments-pasp for pasp syntax highlighting
         run: |
           pip install pygments-pasp
       - name: Compile HTML pages with pymdpages
         run: |
-          python -m pymdpages.pymdpages.pymdpages *.md
+          pymdpages *.md
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
