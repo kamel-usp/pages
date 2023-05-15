@@ -1,0 +1,5 @@
+if !exists('#mdcmp')
+  augroup mdcmp
+    autocmd BufWritePost *.md silent !python -m pymdpages.pymdpages.pymdpages <afile>
+  augroup end
+endif

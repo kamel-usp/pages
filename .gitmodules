@@ -1,0 +1,3 @@
+[submodule "pymdpages"]
+	path = pymdpages
+	url = git@github.com:RenatoGeh/pymdpages.git
