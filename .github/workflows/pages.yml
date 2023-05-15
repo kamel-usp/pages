@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip setuptools build
       - name: Install pymdpages
         run: |
-          cd pymdpages && pip -m build && pip install --force-reinstall dist/pymdpages-*.whl && cd -
+          cd pymdpages && python -m build && pip install --force-reinstall dist/pymdpages-*.whl && cd -
       - name: Add pygments-pasp for pasp syntax highlighting
         run: |
           pip install pygments-pasp
