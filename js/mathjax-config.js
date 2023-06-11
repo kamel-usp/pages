@@ -13,12 +13,20 @@ MathJax = {
         }
       }, '']
     }
-  }
+  },
+  chtml: {
+    scale: 0.9,
+  },
+  svg: {
+    scale: 0.9,
+  },
 };
 
 window.MathJax["tex"] = {
   macros: {
     dpasp: "{\\small\\partial\\mathbb{P}[\\text{ASP}]}",
     pasp: "{\\mathbb{P}\\text{ASP}}",
+    pr: "{\\mathbb{P}}",
+    set: ["{\\mathbf{#1}}", 1],
   }
 };

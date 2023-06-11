@@ -215,9 +215,100 @@ div.content {
   counter-reset: section;
 }
 
+@counter-style paren-lower-roman {
+  system: extends lower-roman;
+  prefix: "(";
+  suffix: ") ";
+}
+
+.content ol.roman {
+  list-style: paren-lower-roman;
+}
+
+@counter-style paren-lower-alpha {
+  system: extends lower-alpha;
+  prefix: "(";
+  suffix: ") ";
+}
+
+.content ol.alpha {
+  list-style: paren-lower-alpha;
+}
+
+@counter-style paren-decimal {
+  system: extends decimal;
+  prefix: "(";
+  suffix: ") ";
+}
+
+.content ol.decimal {
+  list-style: paren-decimal;
+}
+
+.content div.example::before {
+  font-weight: bold;
+  counter-increment: example;
+  content: "Example " counter(example) ". ";
+}
+
+.content div.example {
+  margin-left: 5px;
+  padding-left: 15px;
+  border-style: none none none solid;
+  border-width: 3px;
+  border-color: #bfbfbf;
+}
+
+.content div.example::after {
+  counter-increment: example;
+}
+
+.content img.inline {
+  display: inline;
+  height: 1em;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.content div.highlight {
+  position: relative;
+}
+
+.content code.highlight {
+  background-color: transparent;
+}
+
+.content div.copy {
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  color: #909090;
+}
+
+.content .copy i {
+  text-align: center;
+}
+
+.content div.copy:active {
+  font-size: 0.7em;
+  color: black;
+}
+.content div.copy:hover {
+  color: black;
+}
+
 .content h1 {
   font-size: 2em;
   font-variant: small-caps;
+  counter-reset: example;
 }
 
 .content h2 {
@@ -305,8 +396,11 @@ div.content {
   border-style: solid none solid none;
   border-width: 1px;
 }
+
 .content td {
   min-width: 65px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .content th {
   border-style: none none solid none;
