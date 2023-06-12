@@ -2,8 +2,6 @@ Title: Learning dPASP through examples
 
 # Learning <abbr style="font-variant: normal;">dPASP</abbr> through examples
 
-<!--!!! abs "Abstract"-->
-
 In this tutorial, we shall cover the key features of dPASP by walking through a few practical
 examples. This guide is not concerned with the theory behind dPASP, but instead in providing a
 hands-on tutorial on programming with the dPASP language.
@@ -14,13 +12,13 @@ hands-on tutorial on programming with the dPASP language.
 
 ### The <abbr style="font-variant: normal;">dPASP</abbr> Framework
 
-dPASP stands for *differential Probabilistic Answer Set Programming*. Let us break down that long title to better graps for what the framework is intended. Answer Set Programming (ASP) is a relatively recent type of declarative programming language for describing and solving combinatorial problems (e.g., indendepent sets, 3-coloring, scheduling, etc). It is reminiscient of logic programming (Prolog) languages and constraint solving. Typically, an ASP program will describe a set of choices that constitute candidate solutions (e.g., paths or colorings in a graph, job schedulings, etc) and a set of constraints that determine feasibility. Solutions are obtained as feasible choice. Addtionally, preferences and weights can be assigned to solutions, and maximized over.
-Probabilistic ASP extends such a language with the ability to model uncertainty over solutions. 
+dPASP stands for *differential Probabilistic Answer Set Programming*. Let us break down that long title to better graps for what the framework is intended. Answer Set Programming (ASP) is a relatively recent type of declarative programming language for describing and solving combinatorial problems (e.g., independent sets, 3-coloring, scheduling, etc). It is reminiscient of logic programming (Prolog) languages and constraint solving. Typically, an ASP program will describe a set of choices that constitute candidate solutions (e.g., paths or colorings in a graph, job schedulings, etc) and a set of constraints that determine feasibility. Solutions are obtained as feasible choices. Additionally, preferences and weights can be assigned to solutions, and maximized over.
+Probabilistic ASP extends such a language with the ability to model uncertainty over solutions.
 By assigning a full probabilistic model over ASP programs, one enables parametric learning from data and program induction.
 Our last ingredient is the differential modifier. This stands for the ability of probabilistic choices to be specified as the output of differentiable models (e.g., neural networks), which grants a differentiable semantics of such programs.
-That means that we can learn, in an end-to-end fashion, the paremeters of deep machine learing models whose output assign truth-values to propositions that are further constrained by logic rules in ASP. 
+That means that we can learn, in an end-to-end fashion, the parameters of deep machine learning models whose outputs assign truth-values to propositions that are further constrained by logic rules in ASP.
 
-The rest of this turorial will introduce the reader to all of those components, including the syntax, semantics, inference and learning of dPASP programs. By the end of this tutorial, the reader shall have a clearer understanding on how to...
+The rest of this turorial will introduce the reader to all of those components, including the syntax, semantics, inference and learning of dPASP programs. By the end of this tutorial, the reader should have a clearer understanding on how to...
 
 1. ...describe certain knowledge through the language of dPASP;
 2. ...describe probabilistic knowledge;
@@ -28,16 +26,16 @@ The rest of this turorial will introduce the reader to all of those components, 
 4. ...query for joints and conditionals;
 5. ...learn the parameters of dPASP programs from data.
 
-This tutorial is best followed by a hands-on approach, where examples are implemented and tested. 
-This requires having access to a working version of the dPASP system. 
-The next section describe how to install the system on your computer in detail. 
+This tutorial is best followed by a hands-on approach, where examples are implemented and tested.
+This requires having access to a working version of the dPASP system.
+The next section describes how to install the system on your computer in detail.
 If you already have access to the system, you may [skip it](#uncertain-knowledge-as-programs).
 
 ### Installation
 
-The dPASP system currently only supports Linux SOs.
+The dPASP system currently only supports Linux.
 There are three different ways to install dPASP (in a Linux system): (1) as an [AUR package](#aur-package), (2) as a
-[PyPI project](#pypi) or (3) from [source](#from-source). 
+[PyPI project](#pypi) or (3) from [source](#from-source).
 
 #### AUR Package
 
