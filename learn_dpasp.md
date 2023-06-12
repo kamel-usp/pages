@@ -14,7 +14,7 @@ hands-on tutorial on programming with the dPASP language.
 
 ### The <abbr style="font-variant: normal;">dPASP</abbr> Framework
 
-dPASP stands for *differential Probabilistic Answer Set Programming*. Let us break down that long title to better graps for what the framework is intended. Answer Set Programming (ASP) is a relatively recent type of declarative programming language for describing and solving combinatorial problems (e.g., indendepent sets, 3-coloring, scheduling, etc). It is reminiscient of logic programming (Prolog) languages and constraint solving. Typically, an ASP program will describe a set of choices that constitute candidate solutions (paths or colorings in a graph, job schedulings) and a set of constraints that determine feasibility. Solutions are obtained as feasible choices, Addtionally, preferences and weights can be assigned to solutions, and maximized over.
+dPASP stands for *differential Probabilistic Answer Set Programming*. Let us break down that long title to better graps for what the framework is intended. Answer Set Programming (ASP) is a relatively recent type of declarative programming language for describing and solving combinatorial problems (e.g., indendepent sets, 3-coloring, scheduling, etc). It is reminiscient of logic programming (Prolog) languages and constraint solving. Typically, an ASP program will describe a set of choices that constitute candidate solutions (e.g., paths or colorings in a graph, job schedulings, etc) and a set of constraints that determine feasibility. Solutions are obtained as feasible choice. Addtionally, preferences and weights can be assigned to solutions, and maximized over.
 Probabilistic ASP extends such a language with the ability to model uncertainty over solutions. 
 By assigning a full probabilistic model over ASP programs, one enables parametric learning from data and program induction.
 Our last ingredient is the differential modifier. This stands for the ability of probabilistic choices to be specified as the output of differentiable models (e.g., neural networks), which grants a differentiable semantics of such programs.
@@ -35,9 +35,9 @@ If you already have access to the system, you may [skip it](#uncertain-knowledge
 
 ### Installation
 
-There are three different ways to install dPASP: (1) as an [AUR package](#aur-package), (2) as a
-[PyPI project](#pypi) or (3) from [source](#from-source). The dPASP framework is only available for
-Linux.
+The dPASP system currently only supports Linux SOs.
+There are three different ways to install dPASP (in a Linux system): (1) as an [AUR package](#aur-package), (2) as a
+[PyPI project](#pypi) or (3) from [source](#from-source). 
 
 #### AUR Package
 
@@ -95,7 +95,7 @@ python setup.py install
 
 #### Usage
 
-Once installed, you may either use dPASP from the command-line
+Once installed, you may either use dPASP from the command-line utility `pasp`:
 
 ```
 % For more information and semantics options, see
@@ -148,6 +148,8 @@ facts.
 ```pasp
 capital(brazil, brasilia). located_in(brazil, south_america).
 ```
+
+As you can note from the example above, rules (and facts) are separated by periods.
 
 An integrity constraint is the opposite of a fact: its head is empty but its body is not; the atoms
 in the body can never be true. For instance, **water can never be dry** or **sugar is never
