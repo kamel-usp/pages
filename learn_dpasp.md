@@ -3,9 +3,10 @@ Title: Learning dPASP through examples
 # Learning <abbr style="font-variant: normal;">dPASP</abbr> through examples
 
 <!--!!! abs "Abstract"-->
-    In this tutorial, we shall cover the key features of dPASP by walking through a few practical
-    examples. This guide is not concerned with the theory behind dPASP, but instead in providing a
-    hands-on tutorial on programming with the dPASP language.
+
+In this tutorial, we shall cover the key features of dPASP by walking through a few practical
+examples. This guide is not concerned with the theory behind dPASP, but instead in providing a
+hands-on tutorial on programming with the dPASP language.
 
 ## Table of Contents
 
