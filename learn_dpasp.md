@@ -18,7 +18,7 @@ By assigning a full probabilistic model over ASP programs, one enables parametri
 Our last ingredient is the differential modifier. This stands for the ability of probabilistic choices to be specified as the output of differentiable models (e.g., neural networks), which grants a differentiable semantics of such programs.
 That means that we can learn, in an end-to-end fashion, the parameters of deep machine learning models whose outputs assign truth-values to propositions that are further constrained by logic rules in ASP.
 
-The rest of this turorial will introduce the reader to all of those components, including the syntax, semantics, inference and learning of dPASP programs. By the end of this tutorial, the reader should have a clearer understanding on how to...
+The rest of this tutorial will introduce the reader to all of those components, including the syntax, semantics, inference and learning of dPASP programs. By the end of this tutorial, the reader should have a clearer understanding on how to...
 
 1. ...describe certain knowledge through the language of dPASP;
 2. ...describe probabilistic knowledge;
@@ -147,7 +147,7 @@ facts.
 capital(brazil, brasilia). located_in(brazil, south_america).
 ```
 
-As you can note from the example above, rules (and facts) are separated by periods.
+As you may note from the example above, rules (and facts) are separated by periods.
 
 An integrity constraint is the opposite of a fact: its head is empty but its body is not; the atoms
 in the body can never be true. For instance, **water can never be dry** or **sugar is never
@@ -327,7 +327,7 @@ true and that obey the constraints given by the program) given that `#!pasp stre
 exactly \(\{\texttt{work},\texttt{stress}\}\).
 
 Let's now evaluate the case when `#!pasp stress` is false. There are now two possible models for
-the same program (under : either (1) \(\{\texttt{work}\}\) or (2) \(\{\texttt{sleep}\}\); and so the
+the same program: either (1) \(\{\texttt{work}\}\) or (2) \(\{\texttt{sleep}\}\); and so the
 computations of \(\pr(\texttt{work}|\)`#!pasp not` \(\texttt{stress})\) and
 \(\pr(\texttt{sleep}|\)`#!pasp not` \(\texttt{stress})\) are no longer obvious --- how should we
 deal with different answers? Should we attribute the same probability to models by distributing
