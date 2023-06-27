@@ -51,12 +51,12 @@ and you're good to go.
 #### PyPI
 
 To install from the PyPI repository via `pip`, first install
-[clingo](https://potassco.org/clingo/)'s C API; e.g. on Debian or Ubuntu
+[clingo](https://potassco.org/clingo/)'s C API and `ncurses`; e.g. on Debian or Ubuntu
 
 ```bash
 sudo add-apt-repository ppa:potassco/stable
 sudo apt update
-sudo apt install clingo libclingo-dev
+sudo apt install clingo libclingo-dev libncurses-dev
 ```
 
 and then simply run
@@ -67,15 +67,16 @@ pip install pasp-plp
 
 #### From Source
 
-dPASP only has three build dependencies: (1) [clingo](https://potassco.org/clingo/)'s C API (see
+dPASP only has four build dependencies: (1) [clingo](https://potassco.org/clingo/)'s C API (see
 previous section for details on how to install it on Debian/Ubuntu), (2)
-[setuptools](https://setuptools.pypa.io/en/latest/userguide/quickstart.html), and (3)
-[NumPy](https://numpy.org/). They should be installed *before* compiling and installing dPASP.
+[setuptools](https://setuptools.pypa.io/en/latest/userguide/quickstart.html), (3)
+[NumPy](https://numpy.org/), and `ncurses`. They should be installed *before* compiling and
+installing dPASP.
 
 Runtime dependencies for dPASP: (1) [clingo](https://potassco.org/clingo/), (2)
 [lark](https://lark-parser.readthedocs.io/en/latest/), (3) [NumPy](https://numpy.org/), (4)
-[pandas](https://pandas.pydata.org/) and optionally (5) [PyTorch](https://pytorch.org/) for neural
-extensions.
+[pandas](https://pandas.pydata.org/), `ncurses`, and optionally (5) [PyTorch](https://pytorch.org/)
+for neural extensions.
 
 To install from source, download the dPASP [repository](https://github.com/kamel-usp/dpasp),
 compile and install.
