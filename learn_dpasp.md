@@ -65,6 +65,13 @@ and then simply run
 pip install pasp-plp
 ```
 
+You might have to upgrade your `setuptools` in case `pip` complains no version met the requirements
+for `pasp-plp`.
+
+```bash
+pip install --upgrade setuptools pip
+```
+
 #### From Source
 
 dPASP only has four build dependencies: (1) [clingo](https://potassco.org/clingo/)'s C API (see
